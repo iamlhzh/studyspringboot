@@ -1,0 +1,11 @@
+server:
+  port: 9098
+  
+  
+person: 
+  name: zhangsan
+  age: 19
+  birth: 2019-09-09
+  dog: 
+    name: wangcai
+    address: zhongshan

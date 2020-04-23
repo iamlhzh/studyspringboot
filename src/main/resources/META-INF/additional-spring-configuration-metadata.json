@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "person.name",
+    "type": "java.lang.String",
+    "description": "A description for 'person.name'"
+  },
+  {
+    "name": "person.age",
+    "type": "java.lang.String",
+    "description": "A description for 'person.age'"
+  },
+  {
+    "name": "person.birth",
+    "type": "java.lang.String",
+    "description": "A description for 'person.birth'"
+  },
+  {
+    "name": "person.dog.name",
+    "type": "java.lang.String",
+    "description": "A description for 'person.dog.name'"
+  },
+  {
+    "name": "person.dog.address",
+    "type": "java.lang.String",
+    "description": "A description for 'person.dog.address'"
+  }
+]}
