@@ -1,14 +1,12 @@
-package cn.lhzh.cn.lhzh.controller;
+package cn.lhzh.springboot02config02.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorldController {
-
+public class HelloController {
     @RequestMapping("hello")
-    public String Hello() {
-        return "HelloWorld";
+    public String Hello(){
+        return "Hello";
     }
 }

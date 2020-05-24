@@ -1,11 +1,13 @@
-package cn.lhzh;
+package cn.lhzh.springboot02config02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloWorldApplication {
+public class SpringBoot02Config02Application {
+
     public static void main(String[] args) {
-        SpringApplication.run(HelloWorldApplication.class, args);
+        SpringApplication.run(SpringBoot02Config02Application.class, args);
     }
+
 }
