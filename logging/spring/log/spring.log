@@ -1,0 +1,11 @@
+2020-05-28 10:28:32.000  INFO 21040 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests on DESKTOP-1RBO7GF with PID 21040 (started by admin in C:\MyGitProject\study\studyspringboot\logging)
+2020-05-28 10:28:32.002 DEBUG 21040 --- [main] com.example.demo.DemoApplicationTests    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-28 10:28:32.003  INFO 21040 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2020-05-28 10:28:34.034  INFO 21040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-28 10:28:34.575  INFO 21040 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 3.134 seconds (JVM running for 5.038)
+2020-05-28 10:28:34.956 TRACE 21040 --- [main] com.example.demo.DemoApplicationTests    : 这是trace
+2020-05-28 10:28:34.956 DEBUG 21040 --- [main] com.example.demo.DemoApplicationTests    : 这是debug
+2020-05-28 10:28:34.957  INFO 21040 --- [main] com.example.demo.DemoApplicationTests    : 这是info
+2020-05-28 10:28:34.958  WARN 21040 --- [main] com.example.demo.DemoApplicationTests    : 这是warning
+2020-05-28 10:28:34.958 ERROR 21040 --- [main] com.example.demo.DemoApplicationTests    : 这是error
+2020-05-28 10:28:34.989  INFO 21040 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
