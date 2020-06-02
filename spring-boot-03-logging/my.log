@@ -1,0 +1,11 @@
+2020-05-29 07:42:26.416  INFO 15420 --- [main] c.l.s.SpringBoot03LoggingApplication     : Starting SpringBoot03LoggingApplication on lhzh_computer with PID 15420 (E:\myProject\study\spring-boot-03-logging\target\classes started by 11875 in E:\myProject\study\spring-boot-03-logging)
+2020-05-29 07:42:26.424 DEBUG 15420 --- [main] c.l.s.SpringBoot03LoggingApplication     : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-05-29 07:42:26.425  INFO 15420 --- [main] c.l.s.SpringBoot03LoggingApplication     : No active profile set, falling back to default profiles: default
+2020-05-29 07:42:27.034  INFO 15420 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2020-05-29 07:42:27.045  INFO 15420 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2020-05-29 07:42:27.046  INFO 15420 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-05-29 07:42:27.115  INFO 15420 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2020-05-29 07:42:27.115  INFO 15420 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 664 ms
+2020-05-29 07:42:27.220  INFO 15420 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-29 07:42:27.325  INFO 15420 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-29 07:42:27.331  INFO 15420 --- [main] c.l.s.SpringBoot03LoggingApplication     : Started SpringBoot03LoggingApplication in 1.219 seconds (JVM running for 2.574)
