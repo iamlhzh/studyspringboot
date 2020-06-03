@@ -6,6 +6,16 @@
 </head>
 <body>
 <h1>成功！</h1>
+<div th:text="${hello}" th:id="${hello}" th:class="${hello}"></div>
+<hr/>
 <div th:text="${hello}"></div>
+<div th:utext="${hello}"></div>
+<hr/>
+<!--th:each每次遍历都会生成当前这个标签:3个h4-->
+<h4 th:each="user:${users}" th:text="${user}"></h4>
+<hr/>
+<h4>
+    <span th:each="user:${users}" >[[${user}]] </span>
+</h4>
 </body>
 </html>
