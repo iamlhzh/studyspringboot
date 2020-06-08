@@ -1,5 +1,7 @@
 package cn.lhzh.springboot04webrestfulcrud.config;
 
+import cn.lhzh.springboot04webrestfulcrud.component.MyLocaleResolver;
+import com.sun.corba.se.spi.resolver.LocalResolver;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -9,6 +11,7 @@ import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguratio
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -35,5 +38,9 @@ public class MyMvcConfig implements WebMvcConfigurer {
                 }
             };
             return configuter;
+    }
+    @Bean
+    public LocaleResolver localeResolver(){
+        return new MyLocaleResolver();
     }
 }
