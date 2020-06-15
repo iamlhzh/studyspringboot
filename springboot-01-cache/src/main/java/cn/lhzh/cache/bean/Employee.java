@@ -1,4 +1,4 @@
-package com.atguigu.springmvc.crud.entities;
+package cn.lhzh.cache.bean;
 
 import java.util.Date;
 
