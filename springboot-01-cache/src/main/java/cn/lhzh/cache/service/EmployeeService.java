@@ -6,4 +6,10 @@ public interface EmployeeService {
 
 
     public Employee getEmployeeById(Integer id);
+
+    public Employee updateEmployee(Employee employee);
+
+    String delEmployee(Integer id);
+
+    Employee getEmployeeByLastName(String lastName);
 }

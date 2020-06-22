@@ -13,6 +13,7 @@ public class Employee implements Serializable {
     private Integer gender;
     private Department department;
     private Date birth;
+    private Integer dId;
 
     public Integer getId() {
         return id;
@@ -56,6 +57,14 @@ public class Employee implements Serializable {
 
     public Date getBirth() {
         return birth;
+    }
+
+    public Integer getDId() {
+        return dId;
+    }
+
+    public void setDId(Integer dId) {
+        this.dId = dId;
     }
 
     public void setBirth(Date birth) {
