@@ -10,20 +10,20 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 
 @SpringBootTest
 class Springboot01CacheApplicationTests {
-	@Autowired
-	EmployeeMapper employeeMapper;
-	@Autowired
-	RedisTemplate redisTemplate;
-	@Autowired
-	StringRedisTemplate stringRedisTemplate;
-	@Test
-	public void test01(){
-		redisTemplate.opsForValue().append("a","b");
-	}
-	@Test
-	void contextLoads() {
-		Employee employeeById = employeeMapper.getEmployeeById(1);
-		System.out.println(employeeById.getLastName());
-	}
+//	@Autowired
+//	EmployeeMapper employeeMapper;
+//	@Autowired
+//	RedisTemplate redisTemplate;
+//	@Autowired
+//	StringRedisTemplate stringRedisTemplate;
+//	@Test
+//	public void test01(){
+//		redisTemplate.opsForValue().append("a","b");
+//	}
+//	@Test
+//	void contextLoads() {
+//		Employee employeeById = employeeMapper.getEmployeeById(1);
+//		System.out.println(employeeById.getLastName());
+//	}
 
 }
