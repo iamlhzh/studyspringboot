@@ -2,13 +2,11 @@ package cn.lhzh.springboot04webrestfulcrud.controller;
 
 import cn.lhzh.springboot04webrestfulcrud.entities.Employee;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author admin
@@ -23,7 +21,7 @@ public class LoginController {
         System.out.println(username);
         System.out.println(password);
         //List的copy
-        List<Employee> list1=new ArrayList<>();
+        List<Employee> list=new ArrayList<>();
         Employee e1=new Employee();
         e1.setId(1);
         e1.setLastName("11");
@@ -33,15 +31,38 @@ public class LoginController {
         Employee e3=new Employee();
         e3.setId(3);
         e3.setLastName("33");
-        list1.add(e1);
-        list1.add(e2);
-        list1.add(e3);
+        list.add(e1);
+        list.add(e2);
+        list.add(e3);
 
-        List<Employee> list2=new ArrayList<>(list1);
+
+        //第一种:循环遍历复制
+        List<Employee> list1=new ArrayList<>();
+
+        for (Employee e:list){
+            list1.add(e);
+        }
+
+        //第一二种:new ArrayList<>(list);
+        List<Employee> list2=new ArrayList<>(list);
+
+        //第三种:addAll
+        List<Employee> list3=new ArrayList<>();
+        list3.addAll(list);
+
+        //第四种:Collections.copy();
+        List<Employee> list4=new ArrayList<>(6);
+        Collections.copy(list4,list);
+
+
+
+
         list1.get(0).setLastName("11改");
 
         System.out.println("list1是:"+list1);
         System.out.println("list2是:"+list2);
+        System.out.println("list3是:"+list3);
+        System.out.println("list4是:"+list4);
 
         return "dashboard";
     }
