@@ -1,10 +1,8 @@
 package cn.lhzh.springboot04webrestfulcrud.controller;
 
+import cn.lhzh.springboot04webrestfulcrud.exception.UserNotExistException;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -24,7 +22,10 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String hello(){
+    public String hello(@RequestParam("user") String user){
+        if("aaa".equals(user)){
+            throw new UserNotExistException();
+        }
         return "Hello World!";
     }
     @RequestMapping("/success")
