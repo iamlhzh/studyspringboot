@@ -3,6 +3,8 @@ package cn.lhzh.springboot04webrestfulcrud.config;
 import cn.lhzh.springboot04webrestfulcrud.filter.MyFilter;
 import cn.lhzh.springboot04webrestfulcrud.listener.MyListener;
 import cn.lhzh.springboot04webrestfulcrud.servlet.MyServlet;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
+import org.springframework.boot.autoconfigure.web.embedded.TomcatWebServerFactoryCustomizer;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -10,6 +12,7 @@ import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
