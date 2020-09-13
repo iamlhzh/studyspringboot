@@ -1,6 +1,7 @@
 package com.lhzh.amqp;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +14,16 @@ class Springboot02AmqpApplicationTests {
 
     @Autowired
     RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    AmqpAdmin amqpAdmin;
+
+    @Test
+    void createExchange() {
+//        amqpAdmin.declareExchange(new FanoutExchange("newFanout"));
+//        amqpAdmin.declareQueue(new Queue("newQueue"));
+        amqpAdmin.declareBinding(new Binding("newQueue", Binding.DestinationType.QUEUE,"newFanout","routKey",null));
+    }
 
     @Test
     void contextLoads() {
