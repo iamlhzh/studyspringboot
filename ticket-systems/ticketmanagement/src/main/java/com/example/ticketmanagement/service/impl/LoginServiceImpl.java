@@ -5,6 +5,8 @@ import com.example.ticketmanagement.feign.TicketDealFeignService;
 import com.example.ticketmanagement.service.LoginService;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,13 +16,14 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class LoginServiceImpl implements LoginService {
-    
+
     @Autowired
     private TicketDealFeignService ticketDealFeignService;
 
     @Override
-    public int toLogin(User user) {
-        User userdb= ticketDealFeignService.getUserByLoginName("nihao");
-        return userdb.getId();
+    @CachePut(cacheNames = {"user"},key = "#result.id")
+    public User toLogin(User user) {
+        User userdb= ticketDealFeignService.getUserByLoginName(user.getLoginName());
+        return userdb;
     }
 }

@@ -17,11 +17,6 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setId(18);
         user.setLoginName(loginName);
-//        try {
-//            Thread.sleep(100);
-//        }catch (Exception e){
-//
-//        }
         return user;
     }
 }

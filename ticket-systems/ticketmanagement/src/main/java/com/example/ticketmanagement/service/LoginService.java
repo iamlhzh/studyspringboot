@@ -9,5 +9,5 @@ import com.example.ticketdb.bean.User;
  * @author 卢宏政
  */
 public interface LoginService {
-    int toLogin(User user);
+    User toLogin(User user);
 }
