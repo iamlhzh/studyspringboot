@@ -1,4 +1,4 @@
-package com.example.ticketmanagement.bean;
+package com.example.ticketdb.bean;
 
 import java.util.Date;
 
