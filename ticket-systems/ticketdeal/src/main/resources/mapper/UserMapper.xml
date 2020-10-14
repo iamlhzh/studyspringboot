@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.ticketdeal.mapper.UserMapper" >
+	<!---->
+	<select id="getUserByLoginName" resultType="com.example.ticketdb.bean.User">
+		SELECT
+			id,
+			user_name,
+			login_name,
+			password,
+			create_time,
+			update_time
+		FROM
+			ticket.tb_user
+	</select>
+</mapper>

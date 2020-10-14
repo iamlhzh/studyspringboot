@@ -3,6 +3,7 @@ package com.example.ticketmanagement.feign;
 import com.example.ticketdb.bean.User;
 import feign.hystrix.FallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,11 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public interface TicketDealFeignService {
     /**
      * 。
-     * @param loginName
+     * @param user
      * @return
      */
-    @PostMapping("/user/getUserByLoginName")
-    User getUserByLoginName(String loginName);
+    @GetMapping("/user/getUserByLoginName")
+    User getUserByLoginName(@SpringQueryMap User user);
 
 //    @Component
 //    class TicketDealFeginFactory implements FallbackFactory<TicketDealFeignService> {

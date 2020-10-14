@@ -2,7 +2,9 @@ package com.example.ticketdeal.service.impl;
 
 
 import com.example.ticketdb.bean.User;
+import com.example.ticketdeal.mapper.UserMapper;
 import com.example.ticketdeal.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,11 +14,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
     @Override
     public User getUserByLoginName(String loginName) {
-        User user = new User();
-        user.setId(18);
-        user.setLoginName(loginName);
+        User user = userMapper.getUserByLoginName(loginName);
         return user;
     }
 }

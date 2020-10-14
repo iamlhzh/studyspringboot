@@ -14,11 +14,11 @@ public class TicketDealFeignServiceImpl implements TicketDealFeignService {
     /**
      * 。
      *
-     * @param loginName
+     * @param user
      * @return
      */
     @Override
-    public User getUserByLoginName(String loginName) {
+    public User getUserByLoginName(User user) {
         return null;
     }
 }

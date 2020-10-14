@@ -23,7 +23,7 @@ public class LoginServiceImpl implements LoginService {
     @Override
     @CachePut(cacheNames = {"user"},key = "#result.id")
     public User toLogin(User user) {
-        User userdb= ticketDealFeignService.getUserByLoginName(user.getLoginName());
+        User userdb= ticketDealFeignService.getUserByLoginName(user);
         return userdb;
     }
 }
